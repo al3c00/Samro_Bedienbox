@@ -9,14 +9,18 @@
 
 //Use "Release", otherwise the ATMega328P will try to establish a serial connection, rendering _Func1 unusuable.
 
-//Version Samro_Bedienbox_V1_0
+//Version Samro_Bedienbox_V1_4
 
-//define Inputs
+
+
+
+
+	//define Inputs
 #define _Joystick_Left_X	A1
 #define _Joystick_Left_Y	A0
 #define _Joystick_Right_X	A3
 #define _Joystick_Right_Y	A2
-#define _Button_Input		3
+#define _Button_Input		A4
 
 
 
@@ -30,7 +34,8 @@
 #define _Achse_Rechts		9
 #define _Achse_Gerade		10
 #define _Schnabel_Runter	A5
-#define _Schnabel_Hoch		A4
+#define _Schnabel_Hoch		3
+
 
 
 
@@ -55,6 +60,11 @@ uint16_t interval_time;
 uint16_t Joystick_LowActive_Value = 204;
 uint16_t Joystick_HighActive_Value = 820;
 
+//Value: 1024/5*xV (Threshhold = 50)
+//Button1 pressed: _Button_Input = 2.5V
+//Button2 pressed: _Button_Input = 3.0V
+//Both: 1.8V
+
 
 // the setup function runs once when you press reset or power the board
 void setup() 
@@ -76,6 +86,7 @@ void setup()
 		pinMode(_Achse_Gerade, OUTPUT);
 		pinMode(_Schnabel_Hoch, OUTPUT);
 		pinMode(_Schnabel_Runter, OUTPUT);
+		pinMode(_RollbodenAn, OUTPUT);
 	}
 
 	last_time = 0;
@@ -103,6 +114,24 @@ void loop()
 		//Read button 
 		input.Buttons = analogRead(_Button_Input);
 
+		//Buttons
+		{
+			if (input.Buttons > 462 && input.Buttons < 562)
+			{
+				digitalWrite(_Achse_Gerade, HIGH);
+			}
+			
+			else if (input.Buttons > 564 && input.Buttons < 800)
+			{
+				digitalWrite(_RollbodenAn, HIGH);
+			}
+			else
+			{
+				digitalWrite(_Achse_Gerade, LOW);
+				digitalWrite(_RollbodenAn, LOW);
+			}
+			
+		}
 
 		
 
@@ -197,6 +226,5 @@ digitalWrite(_Achse_Rechts, HIGH); //Set Achse to straight position
 */
 
 }
-
 
 
