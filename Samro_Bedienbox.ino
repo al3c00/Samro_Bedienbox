@@ -118,12 +118,12 @@ void loop()
 		{
 			if (input.Buttons > 462 && input.Buttons < 562)
 			{
-				digitalWrite(_Achse_Gerade, HIGH);
+				digitalWrite(_RollbodenAn, HIGH);
 			}
 			
 			else if (input.Buttons > 564 && input.Buttons < 800)
 			{
-				digitalWrite(_RollbodenAn, HIGH);
+				digitalWrite(_Achse_Gerade, HIGH);
 			}
 			else
 			{
