@@ -113,7 +113,8 @@ void loop()
 		input.Joystick_Right_Y = analogRead(_Joystick_Right_Y);
 		//Read button 
 		input.Buttons = analogRead(_Button_Input);
-
+		
+		
 		//Buttons
 		{
 			if (input.Buttons > 462 && input.Buttons < 562)
@@ -129,6 +130,7 @@ void loop()
 			{
 				digitalWrite(_Achse_Gerade, LOW);
 				digitalWrite(_RollbodenAn, LOW);
+				di
 			}
 			
 		}
