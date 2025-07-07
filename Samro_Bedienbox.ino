@@ -130,16 +130,16 @@ void loop()
 			{
 				if (input.Joystick_Left_X_Measured < Joystick_LowActive_Value)
 				{
-					digitalWrite(_Deichsel_Links, HIGH);
+					digitalWrite(_Func2, HIGH);
 				}
 				else if (input.Joystick_Left_X_Measured >= Joystick_LowActive_Value && input.Joystick_Left_X_Measured < Joystick_HighActive_Value)
 				{
-					digitalWrite(_Deichsel_Links, LOW);
-					digitalWrite(_Deichsel_Rechts, LOW);
+					digitalWrite(_Func1, LOW);
+					digitalWrite(_Func2, LOW);
 				}
 				else if (input.Joystick_Left_X_Measured > Joystick_HighActive_Value)
 				{
-					digitalWrite(_Deichsel_Rechts, HIGH);
+					digitalWrite(_Func1, HIGH);
 				}
 
 
@@ -150,16 +150,16 @@ void loop()
 			{
 				if (input.Joystick_Left_Y_Measured < Joystick_LowActive_Value)
 				{
-					digitalWrite(_Achse_Links, HIGH);
+					digitalWrite(_Deichsel_Rechts, HIGH);
 				}
 				else if (input.Joystick_Left_Y_Measured >= Joystick_LowActive_Value && input.Joystick_Left_Y_Measured < Joystick_HighActive_Value)
 				{
-					digitalWrite(_Achse_Links, LOW);
-					digitalWrite(_Achse_Rechts, LOW);
+					digitalWrite(_Deichsel_Links, LOW);
+					digitalWrite(_Deichsel_Rechts, LOW);
 				}
 				else if (input.Joystick_Left_Y_Measured > Joystick_HighActive_Value)
 				{
-					digitalWrite(_Achse_Rechts, HIGH);
+					digitalWrite(_Deichsel_Links, HIGH);
 				}
 			}
 
@@ -167,16 +167,16 @@ void loop()
 			{
 				if (input.Joystick_Right_Y_Measured < Joystick_LowActive_Value)
 				{
-					digitalWrite(_Func2, HIGH);
+					digitalWrite(_Achse_Rechts, HIGH);
 				}
 				else if (input.Joystick_Right_Y_Measured >= Joystick_LowActive_Value && input.Joystick_Right_Y_Measured < Joystick_HighActive_Value)
 				{
-					digitalWrite(_Func1, LOW);
-					digitalWrite(_Func2, LOW);
+					digitalWrite(_Achse_Links, LOW);
+					digitalWrite(_Achse_Rechts, LOW);
 				}
 				else if (input.Joystick_Right_Y_Measured > Joystick_HighActive_Value)
 				{
-					digitalWrite(_Func1, HIGH);
+					digitalWrite(_Achse_Links, HIGH);
 				}
 			}
 
