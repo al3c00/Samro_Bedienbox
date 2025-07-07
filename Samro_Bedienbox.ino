@@ -150,7 +150,7 @@ void loop()
 			{
 				if (input.Joystick_Left_Y_Measured < Joystick_LowActive_Value)
 				{
-					digitalWrite(_Deichsel_Rechts, HIGH);
+					digitalWrite(_Deichsel_Links, HIGH);
 				}
 				else if (input.Joystick_Left_Y_Measured >= Joystick_LowActive_Value && input.Joystick_Left_Y_Measured < Joystick_HighActive_Value)
 				{
@@ -159,7 +159,7 @@ void loop()
 				}
 				else if (input.Joystick_Left_Y_Measured > Joystick_HighActive_Value)
 				{
-					digitalWrite(_Deichsel_Links, HIGH);
+					digitalWrite(_Deichsel_Rechts, HIGH);
 				}
 			}
 
