@@ -11,12 +11,12 @@ Dies ist eine Steuerungsbox, die die bestehende Steuerung eines Samro Offsett KK
 Die Kontaktschalter der Samro-Bedienbox ziehen das Signal auf Masse. Die Hardware der Box erkennt dies und sendet ein entprechendes Signal an die Hauptplatine der Maschine. Die zusätzliche Bedienbox ergänzt diese FUnktionsweise. An die Signalpins der Kontaktschalter werden Kabel gelötet welche mit der zusätzlichen Box verbunden werden. 
 ### Detailiert
 Beispielhafte Darstellung der Funktionsweise an einer Funktion (Deichsel rechts):
-|Steuerung_Samro|Zusätzliche Steuerung|
-|---------------|---------------------|
+
 ```mermaid
   graph TD;
   Pin_Controller-->Joystick;
-  5v-->Joystick;
+  Joystick-->2N7002_zusätzliche_Box
+  2N7002_zusätzliche_Box-->Masse;
   Joystick-->Masse;
 ```
 
