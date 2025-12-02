@@ -14,7 +14,7 @@ Beispielhafte Darstellung der Funktionsweise an einer Funktion (Deichsel rechts)
 
 ```mermaid
   graph TD;
-  Pin_Controller-->Joystick;
+  Pin_MC_Samro-->Joystick;
   Joystick-->2N7002_zusätzliche_Box;
   ATMega328-->2N7002_zusätzliche_Box;
   2N7002_zusätzliche_Box-->Masse;
