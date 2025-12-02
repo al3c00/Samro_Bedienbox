@@ -19,7 +19,7 @@ Im Hardware-Ordner finden sich die Schemas, Gerber-Dateien und das dazugehörige
 ### + Es gibt viele verschiedene, sehr gute Artikel dazu. Ein Beispiel: https://www.brennantymrak.com/articles/programming-avr-with-arduino
 
 +|ATMEga328|Arduino|
-|------------------|
+|----------|-------|
 |PC6|Pin 10|
 |PB5|Pin 13|
 |PB4|Pin 12|
