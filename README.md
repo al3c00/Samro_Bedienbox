@@ -10,7 +10,10 @@ Dies ist eine Steuerungsbox, die die bestehende Steuerung eines Samro Offsett KK
 Die Kontaktschalter der Samro-Bedienbox ziehen das Signal auf Masse. Die Hardware der Box erkennt dies und sendet ein entprechendes Signal an die Hauptplatine der Maschine. Die zusätzliche Bedienbox ergänzt diese FUnktionsweise. An die Signalpins der Kontaktschalter werden Kabel gelötet welche mit der zusätzlichen Box verbunden werden. 
 
 ## Software:
-Es gibt kein seperater Ordner der für den Quellcode benutzt wird. Die .ino-Datei beinhaltet alle Daten.
+Es gibt kein seperater Ordner der für den Quellcode benutzt wird. Die .ino-Datei beinhaltet alle Daten. 
 
 ## Hardware:
-Im Hardware-Ordner finden sich die Schemas, Gerber-Dateien und das dazugehörige KiCAD-Projekt.
+Im Hardware-Ordner finden sich die Schemas, Gerber-Dateien und das dazugehörige KiCAD-Projekt. 
+
+## Programmierung des ATMega328:
++
