@@ -15,12 +15,15 @@ Beispielhafte Darstellung der Funktionsweise an einer Funktion (Deichsel rechts)
 ```mermaid
   graph TD;
   Pin_Controller-->Joystick;
-  Joystick-->2N7002_zusätzliche_Box
+  Joystick-->2N7002_zusätzliche_Box;
+  ATMega328-->2N7002_zusätzliche_Box;
   2N7002_zusätzliche_Box-->Masse;
   Joystick-->Masse;
 
-style Joystick fill:#00758f
+style Joystick fill:#B0A09E
 ```
+
+Um die Verwendung von ISP auf der Platine zun ermöglichen dürfen ISP-Pins des ATMega328 nicht belegt werden. Dies hat zur Folge, dass nicht alle wichtigen Funktionen der Maschine auf einer zusätzlichen Box belegt werden können. Abhilfe wird mit Jumpern geschaffen. Von zwei ATMega328 Ausgangspins (PD1 und PD2) kann ausgewählt werden, ob das Signal den Bunker oder die Dammaufnahme ansteuern soll. Andere Belegungsänderungen sind während Laufzeit nicht möglich und müssen durch ändern des Quellcodes und Neukompilierung gemacht werden.
 
 ## Software:
 Es gibt kein seperater Ordner der für den Quellcode benutzt wird. Die .ino-Datei beinhaltet alle Daten. 
