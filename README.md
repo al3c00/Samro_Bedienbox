@@ -16,7 +16,7 @@ Es gibt kein seperater Ordner der für den Quellcode benutzt wird. Die .ino-Date
 Im Hardware-Ordner finden sich die Schemas, Gerber-Dateien und das dazugehörige KiCAD-Projekt. 
 
 ## Programmierung des ATMega328:
-### + Es gibt viele verschiedene, sehr gute Artikel dazu. Ein Beispiel: https://www.brennantymrak.com/articles/programming-avr-with-arduino
+### Es gibt viele verschiedene, sehr gute Artikel dazu. Ein Beispiel: https://www.brennantymrak.com/articles/programming-avr-with-arduino
 
 |ATMEga328|Arduino|
 |----------|-------|
