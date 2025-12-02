@@ -24,4 +24,5 @@ Im Hardware-Ordner finden sich die Schemas, Gerber-Dateien und das dazugehörige
 |PB5|Pin 13|
 |PB4|Pin 12|
 |PB3|Pin 11|
-+ In IDE (Arduino IDE oder in meinem Fall Visual Micro in VS2022), wähle Arduino als ISP
++ In IDE (Arduino IDE oder Visual Micro in VS2022), wähle Arduino als ISP
++ Richtiger Chip mit korrekter Clock-Speed
