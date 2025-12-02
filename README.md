@@ -18,6 +18,8 @@ Beispielhafte Darstellung der Funktionsweise an einer Funktion (Deichsel rechts)
   Joystick-->2N7002_zusätzliche_Box
   2N7002_zusätzliche_Box-->Masse;
   Joystick-->Masse;
+
+style Joystick fill:#00758f
 ```
 
 ## Software:
